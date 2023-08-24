@@ -4,7 +4,6 @@ $tema = "Заказ услуги alex-verstak.ru";
 $message = "Ваше сообщение отправлено \r\n Тема: " . filter_input(INPUT_POST, 'clientName', FILTER_SANITIZE_SPECIAL_CHARS); 
 $message .= "E-mail: " . $to . "\r\n"; 
 $message .= "Сообщение: " . filter_input(INPUT_POST, 'message', FILTER_SANITIZE_SPECIAL_CHARS); 
- $secret = '6LdOs2AnAAAAADlssq0c0oXB1lF7enGL4SxViCrr';
 if (isset($to) && $to) mail($to, $tema, $message); 
 else $message = 'error email';
 mail('alexandr.arbuzov1503@mail.ru', $tema, $message); 
